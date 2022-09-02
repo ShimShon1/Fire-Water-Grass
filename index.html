@@ -4,90 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
+    <title>Fire Water Grass</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800;900&display=swap" rel="stylesheet">
 </head>
 <body>  
-
-
-
-
-
-    <script>
-
-        console.log("Welcome to the rock paper scissors game! use the 'game()' function to start!")
-
-
-        let choiches = ["Rock","Paper","Scissors"];
-        let won = 0
-        let lost = 0
-
-        function getComputerChoice(){
-            let computerChoice = choiches[Math.floor(Math.random() * 3 )]
-
-            return computerChoice
-
-        }
-
-        function playRound(computerChoice = getComputerChoice(), playerChoice = prompt("what is ur  weapon?"), ){
-
-            if (playerChoice.toLowerCase() != "rock" && playerChoice.toLowerCase() != "paper" && playerChoice.toLowerCase() != "scissors" ){
-                console.log("illegal weapon!")
-                return null
-            }
-
-
-            console.log("the computer chose " + computerChoice)
-           
-            if(playerChoice.toLowerCase() == computerChoice.toLowerCase()){
-                console.log(`its a draw! you both chose ` + playerChoice.toLocaleLowerCase())
+    <main>
+        <header>
+            <h1 class="score1 score">0</h1>
+            <h1>
+                <span class="fire-txt">Fire |</span> 
+                <span class="water-txt">Water |</span> 
+                <span class="grass-txt">Grass |</span>
                 
-            }else if(playerChoice.toLowerCase() == "paper" & computerChoice.toLowerCase() == "rock")
-            {
-                won++
-                console.log(`you won the round! ${playerChoice.toLowerCase()} beats ${computerChoice.toLowerCase()}!`)
+            </h1>
 
-            }else if(playerChoice.toLowerCase() == "rock" & computerChoice.toLowerCase() == "scissors")
-            {
-                won++
-                console.log(`you won the round! ${playerChoice.toLowerCase()} beats ${computerChoice.toLowerCase()}!`)
+            <h1 class="score2 score">0</h1>
+        </header>
+      
+        <h2 class="text-for-user">Choose your element! </h2>
+        <div class="main-box">
+            <div class="box trainer player">
+                <div class="trainer-img">
 
-            }else if(playerChoice.toLowerCase() == "scissors" & computerChoice.toLowerCase() == "paper")
-            {
-                won++
-                console.log(`you won the round! ${playerChoice.toLowerCase()} beats ${computerChoice.toLowerCase()}!`)
-            }else{
+                </div>
+                <div class="choice fire player-fire">
+                    <p>Fire</p>
+                </div>
+                <div class="choice water player-water">
+                    <p>Water</p>
+                </div>
+                <div class="choice grass player-grass">
+                    <p>Grass</p>
+                </div>
+            </div>
 
-                lost++
-                console.log(`you lost! ${computerChoice.toLowerCase()} beats ${playerChoice.toLowerCase()}!`)
+            <div class = "box choice-display my-display"></div>
 
-            }
-            
-
-     
-
-
-        }
-
-
-        function game(){
-
-            while(won < 3 && lost < 3){
-                playRound()
-                console.log("the score is " + won + " to " + lost )
-            }
-            won = 0
-            lost = 0
-            
-           
-
-           
-
-            
-        }
+            <div class = "box choice-display bot-display"></div>
 
 
 
+            <div class="box trainer bot">
+                <div class="robot-img">
 
+                </div>
+
+                <div class="choice fire">
+
+                    <p>Fire</p>
+                </div>
+
+                <div class="choice water">
+                    <p>Water</p>
+                </div>
+
+                <div class="choice grass">
+                    <p>Grass</p>
+                </div>
+            </div>
+        </div>
+            <button class="game-btn">Reset Game</button>
+    </main>
+
+
+
+
+
+
+    <script src="scripts.js"></script>
     </script>
 </body>
 </html>

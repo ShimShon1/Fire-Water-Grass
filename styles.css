@@ -1,0 +1,195 @@
+html, body{
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    box-sizing: border-box;
+    background-image: url(background.jpg_large);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    
+}
+
+h1{
+    text-align: center;
+    margin-top: 0px;
+    padding: 1rem;
+    font-size: 3rem;
+    
+}
+
+
+.main-box{
+    
+    width: 80%;
+    height: 80vh;
+    width:100%;
+    margin: auto;
+    display: flex;
+    justify-content:space-around;
+}
+
+
+.main-box > div {
+    width:20%;
+    border: 1px solid blue;
+    
+   
+}
+
+
+.box:nth-child(2), .box:nth-child(3){
+    
+    align-self: center;
+    height: 30%;
+
+    
+}
+
+.choice{
+    
+    
+    
+    background: no-repeat top;
+    background-size: 40%;
+    
+}
+
+.choice:hover{
+    flex-basis: 120px;
+    cursor: pointer;
+}
+
+.fire{
+    background-image: url(fire.png);
+    background-color: rgb(187, 34, 34);
+    color: rgb(0, 0, 0);
+}
+
+.water{
+    background-color: aqua;
+    background-image: url(water.png);
+}
+
+.grass{
+    background-image: url(grass.png);
+    background-color: greenyellow;
+    background-size: 32%;
+}
+.choice p{
+    
+    text-align: center;
+    font-size: 2rem;
+    padding: 6%;
+    height: 100%;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.432);
+    
+}
+
+h2{
+    text-align: center;
+    position: relative;
+    top: 5%;
+    margin-top: 0;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
+
+.fire-txt{
+    color:red;
+}
+
+.water-txt{
+    color: rgb(31, 168, 168);
+}
+
+.grass-txt{
+    color: rgb(115, 170, 32);
+}
+
+
+
+.trainer{
+    padding: 1%;
+    display:flex;
+    flex-direction: column;
+    gap: 2%;
+    background-color: rgba(189, 182, 182, 0.507);
+
+    
+}
+
+.choice, .trainer, .robot-img,.trainer-img,.choice-display{
+   
+    border: solid 0.5px black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px black;
+    
+    
+}
+
+
+.trainer > .trainer-img,.robot-img{
+    display: block;
+    border:2px solid rgba(126, 120, 120, 0.5);
+    border-radius: 4px;
+    flex-basis: 400px ;
+    background: no-repeat center;
+
+    
+    
+}
+
+
+
+
+.trainer > .robot-img{
+    background-image: url(TeamRocket.png);
+    border-right: none  !important;
+    background-size: 66%;
+
+    
+}
+
+.trainer > .trainer-img{
+    border-left: none;
+    background-image: url(ash.png);
+    background-size: 53%;
+}
+
+
+main{
+    
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.664);
+}
+
+
+.choice-display{
+    background-image: url(who.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 110%;
+    background-color: rgba(218, 208, 208, 0.61);
+}
+
+
+.game-btn{
+    width: 10%;
+    position: relative;
+    left: 45%;
+    bottom: 17%;
+    height: 5%;
+    font-size: 1.3em;
+    border-radius: 5px;
+    background-color: rgba(189, 182, 182, 0.904);
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around ;
+}
+
